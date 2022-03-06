@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>tn.globe-business.spring</groupId>
-	<artifactId>Globe-Business</artifactId>
+	<artifactId>GlobeBusiness</artifactId>
 	<version>1.0</version>
-	<name>Globe-Business</name>
+	<name>GlobeBusiness</name>
 	<description>Travel application</description>
 	<properties>
 		<java.version>1.8</java.version>
@@ -49,10 +49,6 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-mail</artifactId>
 		</dependency>
 	</dependencies>
 
