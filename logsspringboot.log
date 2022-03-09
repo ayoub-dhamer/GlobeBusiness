@@ -1,3 +1,4 @@
+
 2022-02-24 00:24:48.287  INFO 17392 --- [restartedMain] t.g.spring.GlobeBusinessApplication      : Starting GlobeBusinessApplication using Java 1.8.0_321 on LAPTOP-4TJNJVPI with PID 17392 (C:\Users\ayoub\Documents\workspace-sts-3.8.4.RELEASE\Globe-Business\target\classes started by ayoub in C:\Users\ayoub\Documents\workspace-sts-3.8.4.RELEASE\Globe-Business)
 2022-02-24 00:24:48.287  INFO 17392 --- [restartedMain] t.g.spring.GlobeBusinessApplication      : No active profile set, falling back to default profiles: default
 2022-02-24 00:24:48.349  INFO 17392 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable

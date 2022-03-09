@@ -8,6 +8,7 @@ import lombok.NoArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
+import lombok.Builder;
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.Date;
@@ -18,9 +19,11 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
+@Builder
 @Entity
 @Table(name = "employee")
 public class Employee implements Serializable {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -36,6 +39,14 @@ public class Employee implements Serializable {
 
     private Long phone;
 
+    @Column(name ="login" , unique = true) 
+    private String login;
+    
+    private String pwd; 
+
+    @Enumerated(EnumType.STRING)
+    private Role role;
+
     @Enumerated(EnumType.STRING)
     private Gender gender;
 
@@ -48,8 +59,7 @@ public class Employee implements Serializable {
 
     @JsonBackReference(value = "employee_company")
     @ManyToOne
-    @JoinColumn(name = "company_id")
-    private Company company;
+    Company company;
 
     @OneToMany(cascade=CascadeType.ALL,mappedBy="employee")
     private List<Post> posts;
