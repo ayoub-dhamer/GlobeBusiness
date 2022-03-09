@@ -1,6 +1,7 @@
 package tn.globebusiness.spring.Entities;
 
 public enum Gender {
+
     Male,
     Female
 }

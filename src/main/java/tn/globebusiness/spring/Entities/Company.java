@@ -1,5 +1,7 @@
 package tn.globebusiness.spring.Entities;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
@@ -35,11 +37,14 @@ public class Company {
 
     @OneToMany(mappedBy = "company", cascade = CascadeType.ALL)
     private List<Employee> employees = new ArrayList<>();
-    
+
     @OneToMany(mappedBy = "company", cascade = CascadeType.ALL)
     private List<Event> events = new ArrayList<>();
 
     @OneToMany(mappedBy = "company", cascade = CascadeType.ALL)
     private List<Profession> professions = new ArrayList<>();
+    
+    @OneToMany(cascade=CascadeType.ALL, mappedBy="company")
+	private List<Travel> travels;
 
 }
