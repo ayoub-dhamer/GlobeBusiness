@@ -55,11 +55,11 @@ public class Employee {
     @OneToMany(fetch = FetchType.EAGER,cascade = CascadeType.ALL, mappedBy = "employee")
     private List<Post> posts = new ArrayList<>();
     
-    @OneToMany(mappedBy = "employee", cascade = CascadeType.ALL)
-    private List<EventInvitation> eventInvitations = new ArrayList<>();
+    //@OneToMany(mappedBy = "employee", cascade = CascadeType.ALL)
+    //private List<EventInvitation> eventInvitations = new ArrayList<>();
     
     @OneToMany(mappedBy = "employee", cascade = CascadeType.ALL)
-    private List<Favorite> favorites = new ArrayList<>();
+    private List<Favorite> favorites;
 
 	public Employee(Long id) {
 		super();

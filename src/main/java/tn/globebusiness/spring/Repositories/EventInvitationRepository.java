@@ -13,7 +13,7 @@ public interface EventInvitationRepository extends CrudRepository<EventInvitatio
 	//@Query("SELECT i FROM event_invitation i WHERE i.state= :state")
 	EventInvitation findByState(@Param("state")String state);
 	
-	@Query("SELECT e.email FROM Employee e WHERE e.id= :id")
-	String getEmailByIdForEmployee(@Param("id")Long long1);
+	//@Query("SELECT e.email FROM Employee e WHERE e.id= :id")
+	//String getEmailByIdForEmployee(@Param("id")Long long1);
 
 }

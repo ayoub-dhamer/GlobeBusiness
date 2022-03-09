@@ -13,19 +13,19 @@ public class RatingServiceImpl implements IRatingService {
 	RatingRepository rateRepository;
 
 	@Override
-	public Rating addRate(Rating rate) {
+	public Rating addRating(Rating rate) {
 		List<Rating> listOfRatings = listAllRatings();
 		if(!listOfRatings.contains(rate)) return rateRepository.save(rate);
 		return null;
 	}
 
 	@Override
-	public Rating updateRate(Rating rate) {
+	public Rating updateRating(Rating rate) {
 		return rateRepository.save(rate);
 	}
 
 	@Override
-	public void deleteRate(int rateId) {
+	public void deleteRating(int rateId) {
 		rateRepository.delete(rateRepository.findById(rateId).get());
 	}
 
@@ -35,7 +35,7 @@ public class RatingServiceImpl implements IRatingService {
 	}
 
 	@Override
-	public Rating listRate(int rateId) {
+	public Rating listRating(int rateId) {
 		return rateRepository.findById(rateId).orElse(new Rating());
 	}
 

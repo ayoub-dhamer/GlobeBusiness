@@ -42,7 +42,7 @@ public class Category implements Serializable {
 	Integer categoryId;
 	String name;
 	
-	@OneToMany(mappedBy = "category", cascade = CascadeType.ALL)
-    List<Event> events = new ArrayList<>();
+	//@OneToMany(mappedBy = "category", cascade = CascadeType.ALL)
+    //List<Event> events;
 
 }

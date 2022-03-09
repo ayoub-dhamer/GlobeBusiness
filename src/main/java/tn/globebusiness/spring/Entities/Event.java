@@ -55,15 +55,10 @@ public class Event implements Serializable {
     @JoinColumn(name = "category_id")
     Category category;
 	
-	@JsonBackReference(value = "event_company")
-    @ManyToOne
-    @JoinColumn(name = "company_id")
-    Company company;
-	
 	@OneToMany(mappedBy = "event", cascade = CascadeType.ALL)
-    List<Rating> ratings = new ArrayList<>();
+    List<Rating> ratings;
 	
-	@OneToMany(mappedBy = "event", cascade = CascadeType.ALL)
-    private List<EventInvitation> eventInvitaions = new ArrayList<>();
+	//@OneToMany(mappedBy = "event", cascade = CascadeType.ALL)
+    //private List<EventInvitation> eventInvitaions = new ArrayList<>();
 	
 }

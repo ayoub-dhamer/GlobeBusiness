@@ -66,7 +66,7 @@ public class EventController {
 		return null;
 	}
 	
-	@GetMapping("ListEventByCategoryForEmployee/{category}")
+	/*@GetMapping("ListEventByCategoryForEmployee/{category}")
 	public List<Event> listEventByCategoryForEmployee(@PathVariable("category") String categoryName){
 		Category category = categoryRepository.findByName(categoryName);
 		List<Event> eventsFinale = new ArrayList();
@@ -79,5 +79,5 @@ public class EventController {
 	        });
 		}
 		return eventsFinale;
-	}
+	}*/
 }

@@ -20,14 +20,15 @@ import tn.globebusiness.spring.Repositories.EventInvitationRepository;
 
 @Service
 public class EventInvitationServiceImpl implements IEventInvitationService {
-	
+	/*
+
 	@Autowired
 	EventInvitationRepository invitationRepository;
 
 	@Override
 	public EventInvitation addInvitation(EventInvitation invitation, Employee employee) {
 		String email = invitationRepository.getEmailByIdForEmployee(employee.getId());
-		
+		*/
 		/*try {
 			sendEmailWithAttachment("ayoubdhamer5@gmail.com",
 			"This is an email invitaion to join an event",
@@ -42,7 +43,8 @@ public class EventInvitationServiceImpl implements IEventInvitationService {
 		"This is the Email Body",
 		"This is the email Subject");*/
 		
-		invitation.setEmployee(employee);
+		//invitation.setEmployee(employee);
+	/*
 		return invitationRepository.save(invitation);
 	}
 
@@ -68,5 +70,5 @@ public class EventInvitationServiceImpl implements IEventInvitationService {
 	public List<EventInvitation> listAllInvitations() {
 		return (List<EventInvitation>) invitationRepository.findAll();
 	}	
-	
+	*/
 }

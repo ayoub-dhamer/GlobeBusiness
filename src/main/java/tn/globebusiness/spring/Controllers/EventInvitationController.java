@@ -30,7 +30,7 @@ import tn.globebusiness.spring.Services.IEventInvitationService;
 
 @RestController
 public class EventInvitationController {
-	
+	/*
 	@Autowired
 	IEventInvitationService eventInvitationService;
 	
@@ -45,8 +45,8 @@ public class EventInvitationController {
 	
 	@PostMapping("AddEventInvitation")
 	public void addEvent(@RequestBody EventInvitation invitation){
-		
-		employees.add(new Employee((long) 1));
+		*/
+		/*employees.add(new Employee((long) 1));
 		String email = eventInvitationRepository.getEmailByIdForEmployee(employees.get(0).getId());
 		
 		
@@ -64,14 +64,15 @@ public class EventInvitationController {
 		employees.forEach((employee) -> {
 			System.out.println(111111);
 			eventInvitationService.addInvitation(invitation, employee);
-        });
+        });*/
+	/*
 	}
-	
+	*/
 	/*@GetMapping("ListEventInvitation/{eventId}")
 	public Event listEvent(@PathVariable("eventId") Integer eventId) {
 		return eventInvitationService.listEvent(eventId);
 	}*/
-
+/*
 	@PutMapping("updateEventInvitation")
 	public EventInvitation updateEventInvitation(@RequestBody EventInvitation invitation) {
 		return eventInvitationService.updateInvitation(invitation);
@@ -126,5 +127,6 @@ public class EventInvitationController {
 		mailSender.send(message);
 		System.out.println("Mail Send...");
 	}
+	*/
 
 }

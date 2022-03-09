@@ -46,14 +46,14 @@ public class EventInvitation implements Serializable {
 	@Enumerated(EnumType.STRING)
 	State state;
 	
-	@JsonBackReference(value = "eventInvitation_employee")
-    @ManyToOne
-    @JoinColumn(name = "employee_id")
-    Employee employee;
-	
 	@JsonBackReference(value = "event_invitation")
     @ManyToOne
     @JoinColumn(name = "event_id")
     Event event;
+	
+	@JsonBackReference(value = "invited_employee")
+    @ManyToOne
+    @JoinColumn(name = "employee_id")
+    Employee employee;
 	
 }
