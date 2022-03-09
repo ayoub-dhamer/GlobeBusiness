@@ -1,5 +1,6 @@
 package tn.globebusiness.spring.Entities;
 
+import java.io.Serializable;
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -19,7 +20,7 @@ import java.util.List;
 @ToString
 @Entity
 @Table(name = "employee")
-public class Employee {
+public class Employee implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -50,8 +51,8 @@ public class Employee {
     @JoinColumn(name = "company_id")
     private Company company;
 
-    @OneToMany(fetch = FetchType.EAGER,cascade = CascadeType.ALL, mappedBy = "employee")
-    private List<Post> posts = new ArrayList<>();
+    @OneToMany(cascade=CascadeType.ALL,mappedBy="employee")
+    private List<Post> posts;
 
     @OneToOne(mappedBy="employee")
     private Travel travel;

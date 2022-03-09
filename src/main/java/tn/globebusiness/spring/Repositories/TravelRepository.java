@@ -1,5 +1,4 @@
 package tn.globebusiness.spring.Repositories;
-
 import java.util.Date;
 import java.util.List;
 
@@ -24,5 +23,4 @@ public interface TravelRepository  extends JpaRepository <Travel , Long>{
 	
 	@Query("SELECT t FROM Travel t where t.date_begin>= :date1 AND t.date_begin<= :date2 OR :date1 >= t.date_begin AND :date1 <= t.date_end")
 	List<Travel> retrievTravelbyspecificDate(@Param("date1") Date date1, @Param("date2") Date date2);
-
 }
