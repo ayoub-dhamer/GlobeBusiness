@@ -1,11 +1,12 @@
 package tn.globebusiness.spring.Entities;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
-
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.Date;
@@ -13,7 +14,8 @@ import java.util.List;
 
 @Getter
 @Setter
-@RequiredArgsConstructor
+@NoArgsConstructor
+@AllArgsConstructor
 @ToString
 @Entity
 @Table(name = "employee")
@@ -50,7 +52,7 @@ public class Employee {
 
     @OneToMany(fetch = FetchType.EAGER,cascade = CascadeType.ALL, mappedBy = "employee")
     private List<Post> posts = new ArrayList<>();
-    
+
     @OneToOne(mappedBy="employee")
     private Travel travel;
 
@@ -64,5 +66,4 @@ public class Employee {
 		super();
 		this.id = id;
 	}
-
 }
